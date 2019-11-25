@@ -43,7 +43,7 @@ gulp.task('templates', function() {
     return gulp.src(['./assets/pug/**/*.pug', '!./assets/pug/**/layout.pug', '!./assets/pug/**/_*.pug'])
         .pipe(pug({
             data: {
-                // imgHref: 'https://raw.githubusercontent.com/rpessoa21/nsws/master/static/',
+                // imgHref: 'https://raw.githubusercontent.com/rpessoa21/nsws/master/',
                 imgHref: '/',
                 // baseHref: '',
                 baseHref: '/',
@@ -51,7 +51,7 @@ gulp.task('templates', function() {
             pretty: true
         }))
         .on('error', swallowError)
-        .pipe(gulp.dest('./static/'));
+        .pipe(gulp.dest('./'));
 });
 // 
 
@@ -71,7 +71,7 @@ gulp.task('css', function() {
             // linenos: true
         }))
         .on('error', swallowError)
-        .pipe(gulp.dest('./static/css'))
+        .pipe(gulp.dest('./css'))
         .pipe(browserSync.reload({stream: true}));
 });
 
@@ -83,7 +83,7 @@ gulp.task('css', function() {
 // gulp.task('optimize', () =>
 //     gulp.src('./assets/images/*')
 //         .pipe(imagemin())
-//         .pipe(gulp.dest('./static/img'))
+//         .pipe(gulp.dest('./img'))
 //     );
 
 
@@ -96,13 +96,13 @@ gulp.task('css', function() {
 //     .pipe(uglify())
 //     .on('error', swallowError)
 //     .pipe(concat('main.min.js'))
-//     .pipe(gulp.dest('./static/js'))
+//     .pipe(gulp.dest('./js'))
 //     .pipe(browserSync.reload({stream: true}));
 // });
 
 gulp.task('default', ['css', 'templates'], function () {
 
-    browserSync({server: './static/'});
+    browserSync({server: './'});
 
     // gulp.watch('./assets/js/*.js', ['js']);
     gulp.watch('./assets/stylus/**/*.styl', ['css']);
