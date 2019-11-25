@@ -1,0 +1,60 @@
+// botao
+// ============
+
+.btn
+	background-color darkColorMaster
+	border 2px solid darkColorMaster
+	color white
+	display inline-block
+	font 700 16px fontSecond
+	letter-spacing 2px
+	padding 6px 27px
+	position relative
+	text-transform uppercase
+	transition .2s ease
+
+
+	&:hover
+		background-color transparent
+		color darkColorMaster
+
+
+
+.btn-white
+	@extends .btn
+	border 2px solid white
+	color white
+
+	&:hover
+		background-color white
+		color lightColorMaster
+
+
+
+.btn-fill
+	@extends .btn
+	background-color lightColorMaster
+	border 2px solid lightColorMaster
+	color white
+
+	&:hover
+		background-color white
+		color lightColorMaster
+
+
+
+.btn-back
+	@extends .btn
+
+	span
+		&:before
+			color lightColorMaster
+			content '‹'
+			display inline-block
+			font-size 20px
+			line-height 0
+			margin-right 10px
+
+
+.btn_agendamento_zap
+	max-width: 220px;

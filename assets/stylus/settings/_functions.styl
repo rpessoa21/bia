@@ -1,0 +1,199 @@
+// ========================
+// FONTS
+// ========================
+
+font-face($family, $file, $weight)
+	$font-url = '../fonts/'
+
+	@font-face
+		font-family $family
+		font-weight $weight
+		font-style normal
+		// src url($font-url + $file + '.eot')
+		// src url($font-url + $file + '.eot?#iefix') format('embedded-opentype'), url($font-url + $file + '.woff') format('woff'), url($font-url + $file + '.otf') format('opentype'), url($font-url + $file + '.svg#' + $file) format('svg')
+		src url($font-url + $file + '.woff') format('woff'), url($font-url + $file + '.woff2') format('woff2'), url($font-url + $file + '.ttf') format('ttf')
+
+
+// font-face('Gotham', 'GothamMedium', 'normal')
+// font-face('proximanova-light', 'proximanova-light', '300')
+// font-face('proximanova-bold', 'proximanova-bold', '700')
+
+
+// ========================
+// DEFINE UMA DISTANCIA ENTRE AS COLUNAS
+// ========================
+
+gutter(gap)
+	> *
+		padding-left gap
+		padding-right gap
+	
+		&:first-child
+			padding-left 0
+			
+		&:last-child
+			padding-right 0
+			
+
+
+
+
+
+// =================
+// lines
+// =================
+
+// linha abaixo do elemento
+// ===============
+line-bottom()
+	&:after
+		bottom 0
+		background-color lightColorMaster
+		content ''
+		display block
+		height 5px
+		left 65px
+		margin 40px 0
+		width 130px
+		
+
+// linha centralizada abaixo do elemento
+// ===============
+line-bottom--center()
+	margin-bottom 40px
+	padding-bottom 10px
+	position relative
+	
+	&:after
+		background-color lightColorMaster
+		bottom -16px
+		content ''
+		height 3px
+		left 50%
+		position absolute
+		transform translateX(-50%)
+		width 130px
+		
+
+// linha a direita abaixo do elemento
+// ===============
+line-bottom--right(color)
+	margin-bottom 20px
+	position relative
+	
+	&:after
+		background-color color
+		bottom -16px
+		content ''
+		height 3px
+		position absolute
+		right 0
+		width 80px
+		
+		
+// linha acima do elemento
+// ===================
+line-top()
+	&:before
+		background-color lightColorMaster
+		content ''
+		display block
+		height 5px
+		margin 10px 0
+		width 100px
+
+
+// linha centralizada acima do elemento
+// ===================
+line-top--center(color)
+	margin-top 20px
+	position relative
+	
+	&:before
+		background-color color
+		content ''
+		height 3px
+		left 50%
+		position absolute
+		top -16px
+		transform translateX(-50%)
+		width 130px
+		
+
+
+			
+// ========================
+// MUDA A COR DO TEXTO QUANDO SELECIONA
+// ========================
+selection(backgroundColor, colorFont)
+	::selection
+		background backgroundColor
+		color colorFont
+	
+	::-moz-selection
+		background backgroundColor
+		color colorFont
+
+
+
+
+
+		
+
+// Hamburger Settings
+// ------------------------------------------------------------------------
+$hamburger-settings = ();
+
+
+
+// Hamburger Generator
+// ------------------------------------------------------------------------
+hamburger-generator($width = 32px, $height = 3px, $gutter = 5px, $color = #000,
+										$border-radius = 0, $duration = .3s,
+										$timing-function = ease)
+	// Set variables
+	push($hamburger-settings, $height, $gutter)
+
+	position: relative
+	margin-top: $height + $gutter
+	margin-bottom: $height + $gutter
+
+	&,
+	&:before,
+	&:after
+		display: block
+		width: $width
+		height: $height
+		transition: background-color $duration $timing-function,
+								transform $duration $timing-function
+
+		if ($border-radius != 0)
+			border-radius: $border-radius
+
+		background-color: $color
+
+	&:before,
+	&:after
+		position: absolute
+		content: ""
+
+	&:before
+		top: -($height + $gutter)
+
+	&:after
+		top: $height + $gutter
+
+
+
+// Hamburger Animation
+// ------------------------------------------------------------------------
+hamburger-animation()
+	$height = $hamburger-settings[0]
+	$gutter = $hamburger-settings[1]
+	background-color: transparent
+
+	&:before
+		transform: translateY($gutter + $height) rotate(45deg)
+
+	&:after
+		transform: translateY(-($gutter + $height)) rotate(-45deg)

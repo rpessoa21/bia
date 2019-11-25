@@ -1,0 +1,180 @@
+// slider swiper idangerous
+// ================
+
+.slider-carousel
+	padding-bottom 90px
+	width calc(100% - 100px)
+
+
+.slider-single--wrap
+	margin 0 auto
+	max-width 1280px
+	position relative
+
+
+
+.swiper-slide
+	.slider-single--wrap &
+		width 100% !important
+
+
+
+.swiper-button-prev
+	background-image url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")
+
+
+.swiper-button-next
+	background-image url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")
+
+.swiper-button-prev
+.swiper-button-next
+	@media (max-width menuViewPort - 1)
+		display none
+
+
+
+
+
+.slider-single--pagination
+	bottom 20px !important
+	display flex
+	flex-direction row
+	left 50% !important
+	max-width 1170px !important
+	// justify-content center
+	position absolute
+	transform translate(-50%, 50%)
+	width 100%
+	// width auto !important
+	z-index 90
+
+	@media (max-width menuViewPort - 1)
+		bottom 4% !important
+
+
+	> span
+		opacity 1
+
+
+		&.swiper-pagination-bullet
+			background white
+			height 10px
+			width 10px
+
+			@media (min-width menuViewPort)
+				border-radius 3px
+				height 5px
+				margin 7px !important
+				// transform translateX(50px)
+				width 50px
+
+
+		&.swiper-pagination-bullet-active
+			background lightColorMaster
+
+
+
+
+
+
+.swiper-pagination
+	> *
+		background transparent
+		border 2px solid darkColorMaster
+		cursor pointer
+		height 18px
+		width 18px
+		opacity 1
+
+		&.swiper-pagination-bullet-active
+			background darkColorMaster
+			border 2px solid darkColorMaster
+
+
+
+
+
+
+
+// =============================
+
+.slider-single--image
+	line-height 0
+	position relative
+
+
+	img
+		height 100%
+		max-height calc(100vh - 305px)
+		// max-height calc(100vh - 305px)
+		object-fit cover
+		width 100%
+
+		@media (max-width menuViewPort - 1)
+			height calc(100vh - 155px)
+			max-height 540px
+
+
+
+.slider-single--float
+	left 50%
+	max-width 1200px
+	padding 0 16px
+	position absolute
+	top 50%
+	transform translate(-50%, -50%)
+	width 100%
+
+	@media (max-width menuViewPort - 1)
+		padding 0 20px
+
+
+
+.slider-single--text
+	color lightColorMaster
+	font-size 20px
+
+	> *
+		@media (max-width menuViewPort - 1)
+			font-size 16px
+			line-height .9
+			margin-top 10px
+
+
+.slider-single--title
+.slider-single--text
+.slider-single--button
+	max-width 560px
+	text-align center
+
+
+.slider-single--title
+	color darkColorMaster
+
+
+	&:before
+		background url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='57' height='25'%3E%3Cpath  fill='%23997662' fill-rule='evenodd' clip-rule='evenodd' d='M23.289 11.249C14.291 7.007-.943 9.749.348 19.676c.521 3.999 4.992 6.66 9.832 4.214.311-1.02 2.854-3.995.468-4.682-1 6.082-9.808 5.069-8.428-2.342.372-1.995 2.788-3.884 4.683-4.682 12.544-5.287 20.64 5.35 30.433 6.556 8.39 1.031 15.944-.603 19.664-5.619-2.145-.882-3.549 1.47-5.618 2.341-8.005 3.368-21.314 1.811-25.751-4.213-3.064-4.16-1.87-11.465 5.617-8.896 2.091 1.448-.215 4.556 2.342 5.149 2.833-12.86-17.295-6.981-10.301 3.747z'/%3E%3C/svg%3E")
+		content ''
+		display inline-block
+		height 25px
+		margin-bottom 6px
+		width 57px
+
+
+	> *
+		line-height 1
+		font-size 36px
+
+
+		@media (min-width 1200px)
+			font-size 55px
+
+
+
+.slider-single--button
+	// letter-spacing 2px
+	margin-top 40px
+
+	> *
+		font-size 17px
+		font-weight 400

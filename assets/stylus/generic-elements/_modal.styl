@@ -1,0 +1,167 @@
+// modal
+// =============
+.modal
+	// backface-visibility hidden
+	background #f5f5f5
+	// box-shadow 0px 0px 6px rgba(darkColorMaster, .7)
+	// height 95vh
+	left 50%
+	padding-bottom 0
+	padding-top 0
+	position fixed
+	top -250%
+	transform translate(-50%, 0)
+	transition .7s cubic
+	width 100%
+	z-index 6000
+
+	
+	@media (min-width 1080px)
+		background linear-gradient(to bottom, transparent 64px,transparent 64px, #f5f5f5 64px)
+		left 50%
+		max-width 768px
+		transform translate(-50%, 0)
+
+	&.active
+		top 3vh
+		z-index 13000
+	
+		@media (min-width 1080px)
+			transform translate(-50%, 0%)
+		
+		
+	.container
+		margin 30px -10px
+		overflow auto
+		padding 34px 10px
+		position relative
+		
+		
+	.row
+		@media (min-width tablet)
+			padding 0 60px
+		
+	.relative
+		overflow hidden
+				
+	.overflow
+		height calc(95vh - 64px)
+		overflow auto
+		padding-bottom 40px
+
+
+.close-modal
+	background darkColorMaster
+	color black
+	position absolute
+	right 0
+	top 0
+	transition .4s cubic
+	z-index 1000
+
+
+	a
+		color white
+		font-size 48px
+		font-weight 100
+		padding 10px 26px
+		transition .4s ease
+		
+		// &:hover
+		// 	background-color darkColorMaster
+		// 	color lightColorMaster
+
+
+// ===================
+
+.modal-overlay
+	background-color rgba(white, .87)
+	height 100%
+	left 0
+	opacity 0
+	pointer-events none
+	position fixed
+	top 0
+	transition .4s cubic
+	width 100%
+	z-index 2000
+	
+	@media (min-width 1040px)
+		z-index 2000
+	
+	&.active
+		opacity 1
+		pointer-events all
+
+
+
+
+
+
+
+
+
+
+// ===================
+
+
+.modal-title
+	color white
+	font 30px fontSecond
+	text-transform uppercase
+	
+
+	strong
+		color lightColorMaster
+		font 98px fontMaster
+		text-transform none
+
+
+
+
+
+
+
+
+
+
+// agende
+// ==========
+
+.modal-agende--wrap
+	@media (min-width desktopSmall)
+		padding-left 160px
+		
+
+
+.modal-destaque
+	color white
+	font-size 22px
+	margin-bottom 20px
+	text-transform uppercase
+
+
+
+.modal-lojas--card
+	display flex
+	flex-flow row wrap
+	margin-bottom 20px
+	
+
+.modal-lojas--card---title
+	background-color white
+	color darkColorMaster
+	font-weight 500
+	margin-right 20px
+	text-align center
+	text-transform uppercase
+	width 140px
+	
+	p
+		line-height 2.8
+	
+
+.modal-lojas--card---text
+	color white
+	font-size 14px
+	

@@ -1,0 +1,90 @@
+
+.grid
+	> *
+		display flex
+		flex-wrap wrap
+				
+				
+.grid-two-cols
+	@extends .grid
+	
+	> *
+		> *
+			flex-basis: 100%;
+			// max-width: 100%;
+			
+			@media (min-width tablet)
+				flex-basis: 50%;
+				// max-width: 50%;
+			
+.grid-three-cols
+	@extends .grid
+	
+	> *
+		> *
+			flex-basis: 100%;
+			// max-width: 100%;
+			
+			@media (min-width tablet) and (max-width desktopSmall - 1)
+				flex-basis: 50%;
+				// max-width: 50%;
+				
+			@media (min-width desktopSmall)
+				flex-basis: 33.333%;
+				// max-width: 33.333%;
+				
+.grid-four-cols
+	@extends .grid
+	
+	> *
+		> *
+			flex-basis: 100%;
+			// max-width: 100%;
+
+			@media (min-width oldMobile) and (max-width tablet - 1)
+				flex-basis: 50%;
+				// max-width: 50%;
+				
+			@media (min-width tablet) and (max-width desktopSmall - 1)
+				flex-basis: 33.333%;
+				// max-width: 33.333%;
+				
+			@media (min-width desktopSmall)
+				flex-basis: 25%;
+				// max-width: 25%;
+				
+.grid-five-cols
+	@extends .grid
+	
+	> *
+		> *
+			flex-basis: 100%;
+			// max-width: 100%;
+			
+			@media (min-width oldMobile) and (max-width tablet - 1)
+				flex-basis: 50%;
+				// max-width: 50%;
+				
+			@media (min-width tablet) and (max-width desktopSmall - 1)
+				flex-basis: 33.333%;
+				// max-width: 33.333%;
+				
+			@media (min-width desktopSmall)
+				flex-basis: 20%;
+				// max-width: 20%;
+
+
+
+
+
+
+
+
+
+
+// ========================
+
+
+
+
+	

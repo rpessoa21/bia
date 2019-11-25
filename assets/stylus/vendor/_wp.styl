@@ -1,0 +1,97 @@
+wp.styl.screen-reader-text,
+.screen-reader-text
+.visually-hidden
+	/* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+	position: absolute !important;
+	height: 1px; width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+
+
+// pagination
+// ===========
+
+.item-pagination--ul,
+div.nav-links
+	display flex
+	margin 80px 0 100px
+
+	@media (min-width tablet)
+		margin 80px 0 100px 150px
+
+	.item-pagination--center &
+		justify-content center
+		margin-left 0
+
+
+.item-pagination--li,
+.page-numbers
+	+ .item-pagination--li,
+	+ .page-numbers
+		margin-left 10px
+
+
+.item-pagination--a,
+.page-numbers
+	align-items center
+	background-color lightColorMaster
+	color white
+	display flex
+	font-weight 700
+	height 42px
+	justify-content center
+	transition background-color .4s ease
+	width 48px
+
+
+	&:hover
+	&.active,
+	&.current
+		background-color darkColorMaster
+		color lightColorMaster
+
+
+
+.alignleft {
+	display: inline;
+	float: left;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+}
+
+.aligncenter {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (min-width menuViewPort)
+	blockquote.alignleft,
+	.wp-caption.alignleft,
+	img.alignleft {
+		margin: 0.4em 1.6em 1.6em 0;
+	}
+
+	blockquote.alignright,
+	.wp-caption.alignright,
+	img.alignright {
+		margin: 0.4em 0 1.6em 1.6em;
+	}
+
+	blockquote.aligncenter,
+	.wp-caption.aligncenter,
+	img.aligncenter {
+		clear: both;
+		margin-top: 0.4em;
+		margin-bottom: 1.6em;
+	}
+
+	.wp-caption.alignleft,
+	.wp-caption.alignright,
+	.wp-caption.aligncenter {
+		margin-bottom: 1.2em;
+	}

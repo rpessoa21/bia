@@ -1,0 +1,44 @@
+// instagram instafeed
+// =============
+
+#instagram
+	display flex
+	flex-flow row wrap
+	
+	.grid-item
+		flex-basis 100%
+		line-height 0
+		padding 8px
+		position relative
+		
+		&:hover
+			img
+				opacity .8
+		
+
+		@media (max-width tablet - 1)
+			&:nth-of-type(n+3)
+				display none
+		
+		@media (max-width desktopSmall - 1)
+			&:nth-of-type(n+4)
+				display none
+				
+		@media (min-width oldMobile)
+			flex-basis 50%
+		
+		@media (min-width tablet)
+			flex-basis 33%
+		
+		@media (min-width desktopSmall)
+			flex-basis 20%
+
+	img
+		transition .4s ease
+		width 100%
+		
+		@media (min-width tablet)
+			height 236px
+			object-fit cover
+			
+

@@ -1,0 +1,139 @@
+.item-animation
+	// here animation works
+	opacity 0
+	transform translateY(40px)
+	transition transform .7s ease .2s, opacity .5s ease .3s
+	
+	&.visible
+		opacity 1
+		transform translateY(0)
+
+
+
+
+
+// circulo cinza
+// ==========
+
+.item-presentation--main-circle
+	transform scale(0) translate(-50%, -50%)
+	transform-origin top left
+	transition transform .7s ease .2s, opacity .5s ease .3s
+	
+	&.visible
+		animation bounce .9s ease forwards
+
+
+@keyframes bounce
+	0%
+		transform scale(0) translate(-50%, -50%)
+		
+	50%
+		transform scale(1.1) translate(-50%, -50%)
+		
+	100%
+		transform scale(1) translate(-50%, -50%)
+
+
+
+
+// imagem do bolo principal
+// ============
+
+.item-presentation--main-img
+	img
+		opacity 0
+		transform translateY(40px)
+		transition transform .7s ease 0.4s, opacity .5s ease 0.5s
+		
+		&.visible
+			opacity 1
+			transform translateY(0)
+
+
+
+
+
+// caixas de texto
+// =======
+
+#seta1
+	opacity 0
+	transform translateX(100%)
+	transition transform .7s ease 0.9s, opacity .5s ease 1s
+
+	&.visible
+		opacity 1
+		transform translateX(70%)
+
+
+
+#seta3
+	opacity 0
+	transform translateY(-100%)
+	transition transform .7s ease 1.9s, opacity .5s ease 2.4s
+
+	&.visible
+		opacity 1
+		transform translateY(0%)
+
+
+
+#seta2
+	opacity 0
+	transform rotate(270deg) scaleY(-1) translate(50px, -140px)
+	transition transform .7s ease 1.9s, opacity .5s ease 2.4s
+
+	&.visible
+		opacity 1
+		transform rotate(270deg) scaleY(-1) translate(50px, -40px)
+		
+
+
+
+
+
+
+
+#boxtext1
+	opacity 0
+
+	&.visible
+		animation boxtext .9s ease forwards 1.6s
+		
+
+
+#boxtext3
+	opacity 0
+
+	&.visible
+		animation boxtext .9s ease forwards 2s
+		
+
+
+#boxtext2
+	opacity 0
+
+	&.visible
+		animation boxtext .9s ease forwards 1s
+		
+
+
+
+@keyframes boxtext
+	0%
+		transform scale(0)
+		
+	25%
+		transform scale(1.1) rotate(5deg)
+	
+	50%
+		opacity 1
+		transform scale(1) rotate(-5deg)
+		
+	75%
+		transform scale(1) rotate(5deg)
+	
+	100%
+		opacity 1
+		transform scale(1) rotate(0deg)

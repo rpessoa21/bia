@@ -1,0 +1,40 @@
+// ====================
+// section
+// ====================
+gutterSection = 80px
+
+
+.main
+	> section
+		padding 50px 0
+		position relative
+		
+		@media (min-width menuViewPort)
+			padding gutterSection 0
+
+
+section
+	// espacamento
+	// =========
+		
+	&.no-gap
+		padding 0
+	
+
+main > section:first-of-type
+	padding-bottom 0
+	padding-top 0
+	
+	
+.home main > section:last-of-type
+	padding-bottom 0
+	
+
+
+section.color
+	background-color #f2f2f2
+	
+
+section.darken
+	background-color #d9d0ce
+	padding 0

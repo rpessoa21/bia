@@ -1,0 +1,100 @@
+// acordion
+// ===========
+dl
+	> dt
+		cursor pointer
+		position relative
+		
+
+		// coloca um sinal de mais
+		// =========
+		.acordion-circle
+			background-color lightColorMaster
+			border-radius 50%
+			height 19px
+			left 30px
+			position absolute
+			top 50%
+			transform translateY(-50%)
+			width 19px
+			
+
+		.acordion-plus
+			left 30px
+			position absolute
+			top 50%
+			transform translateY(-50%)
+			z-index 2
+			
+			&:before
+			&:after
+				background-color #f6f6f6
+				content ''
+				display block
+				transition .4s ease
+			
+			
+			&:before
+				height 10px
+				transform translate(0.53em,0.03em)
+				width 2px
+				
+				^[0] > dt.active .acordion-plus:before
+					transform translate(0.53em,0.03em) rotate(90deg)
+
+
+			&:after
+				height 2px
+				transform translate(0.29em,-0.33em)
+				width 10px
+				
+				^[0] > dt.active .acordion-plus:after
+					opacity 0
+					transform translate(0.29em,-0.33em) rotate(90deg)
+			
+
+
+		.acordion-arrow
+			position absolute
+			right 30px
+			top 50%
+			transform translateY(-50%)
+			
+			@media (max-width tablet - 1)
+				right 14px
+			
+			&:after
+				background-image url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='451.846' height='451.847'%3E%3Cpath fill='%236196a8' d='M345.441 248.292L151.154 442.573c-12.359 12.365-32.397 12.365-44.75 0-12.354-12.354-12.354-32.391 0-44.744L278.318 225.92 106.409 54.017c-12.354-12.359-12.354-32.394 0-44.748 12.354-12.359 32.391-12.359 44.75 0l194.287 194.284c6.177 6.18 9.262 14.271 9.262 22.366 0 8.099-3.091 16.196-9.267 22.373z'/%3E%3C/svg%3E")
+				background-size cover
+				content ''
+				display block
+				height 28px
+				width 22px
+				transition .4s ease
+				
+				@media (max-width tablet - 1)
+					height 20px
+					width 15px
+					
+				
+				^[0] > dt.active .acordion-arrow:after
+					transform rotate(90deg)
+			
+		
+		&.active
+			border-bottom none
+		
+		a
+			text-decoration none
+			
+
+	> dd
+		display none
+		
+		
+		+ dt
+			margin-top 20px
+			
+
+
+

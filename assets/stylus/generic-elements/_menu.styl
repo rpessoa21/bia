@@ -1,0 +1,131 @@
+// menu area
+// =============
+
+.item-menu--wrap
+	background-color lctwo
+	display flex
+	position fixed
+	width 100%
+	z-index 10
+	
+	
+	@media (max-width broken - 1)
+		bottom 0
+
+
+	@media (min-width broken)
+		height 100%
+		top 0
+		width 100px
+		
+
+		&:after
+			background-color rgba(white, .2)
+			bottom 0
+			content ''
+			height 100px
+			left 50%
+			position absolute
+			width 1px
+		
+		
+	
+
+// menu principal
+// ================
+
+.menu-primary
+	width 100%
+
+	
+	@media (min-width broken)
+		position absolute
+		top 50%
+		transform rotate(270deg) translateX(25%)
+		width 100%
+		
+
+	ul
+		display flex
+		justify-content center
+		margin 0 auto
+		width 300px
+		
+		@media (min-width broken)
+			justify-content space-around
+			width auto
+
+		li
+			+ li
+				@media (min-width broken)
+					margin-left 30px
+					
+			a
+				color white
+				font-weight 600
+				padding 19px 14px
+				position relative
+				transition color .4s ease
+				
+				@media (min-width broken)
+					padding 0
+				
+				
+				&:hover
+					color icone
+				
+
+			&.current-menu-item
+				a
+					body:not(.home) &
+						background linear-gradient(to bottom, icone 0%, icone 100%)
+						background-position 0 100%
+						background-repeat repeat-x
+						background-size 4px 4px
+						color icone
+						transition background-size .4s, color .2s
+
+
+					// &:after
+					// 	background-color rgba(white, .2)
+					// 	content ''
+					// 	height 50%
+					// 	left 50%
+					// 	position absolute
+					// 	top 99%
+					// 	width 1px
+
+
+
+// wrap contact
+// ===============
+
+.menu-contact--area
+	bottom 53px
+	height calc(100vh - 120px)
+	left 0
+	overflow hidden
+	pointer-events none
+	position absolute
+	width 100%
+
+
+.menu-contact--overlay
+	background-color lcone
+	bottom 0
+	left 0
+	position absolute
+	transform translateY(100%)
+	width 100%
+	
+
+	// interaction open menu
+	// ============
+		
+	#menu-contact:checked ~ .menu-contact--area &
+		pointer-events all
+		transform translateY(0)
+
+
+
+

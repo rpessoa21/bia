@@ -1,0 +1,128 @@
+body
+	background url(../img/top.jpg) no-repeat top center
+
+
+section:not(:first-of-type)
+	padding-bottom 120px
+
+
+// padroes
+// =======
+
+.item-destaque
+	font-size 24px
+	
+	p:first-of-type:first-letter
+	.letter:first-letter
+		font-size 40px
+		line-height 1
+
+
+.item-title
+	margin-bottom 60px
+	text-align center
+
+
+.item-text
+	font-size 22px
+	
+	p:first-of-type:first-letter
+		font-size 36px
+		line-height 1
+		
+
+	p + p
+		margin-top 30px
+		
+
+.item-olho
+	font-size 36px
+	padding-top 60px
+	position relative
+
+	&:before
+		background black
+		content ''
+		height 1px
+		top 0
+		position absolute
+		width 180px
+		
+	
+	+ p
+		padding-top 60px
+
+
+.item-olho--left
+	float left
+	margin 60px 30px
+	max-width 46%
+
+
+// img
+// ======
+
+.img-right
+	float right
+	margin 0 0 30px 60px
+
+
+.img-left
+	float left
+	margin 0 60px 30px 0
+
+
+
+// header
+// ============
+
+.header
+	background white
+	box-shadow 1px 1px 10px rgba(black, .1)
+	position fixed
+	width 100%
+	z-index 2
+	
+
+.item-header
+	align-items center
+	display flex
+	justify-content space-between
+	padding 7px 16px
+	
+
+.item-logo
+	font-size 24px
+	
+
+
+// main
+// ==========
+
+.main
+	padding-top 60px
+	
+
+
+
+// section
+// =============
+
+.tpl-top
+	.container
+		max-width 1100px
+		
+	
+	.item-content
+		max-width 800px
+		padding 20vh 0
+
+
+.item-subject
+	> *
+		font-size 65px
+		line-height 1.2
+	
+
+.item-autora
+	font-size 36px

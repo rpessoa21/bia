@@ -1,0 +1,110 @@
+*
+	box-sizing border-box
+
+html
+	height 100%
+
+// ========================
+// generic elements
+// ========================
+
+body
+	color lctwo
+	font-family fontMaster
+	font-size 16px
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+	text-rendering optimizeLegibility
+
+	&.no-scroll
+		overflow hidden
+		
+
+	&.home
+		background-color #0e181a
+		
+
+
+
+a
+	color inherit
+	display inline-block
+	text-decoration none
+
+
+
+
+// links para telefone
+// =====================
+a[href^="tel:"]
+	cursor default
+
+
+p
+	line-height 1.6
+
+
+	+ p
+		margin-top 10px
+
+
+
+strong
+b
+	font-weight 700
+
+em
+i
+	font-style italic
+
+
+selection(lcone, white)
+
+
+ol
+	list-style-type decimal
+	list-style-position inside
+// 	counter-reset item
+
+// 	li
+// 		display block
+// 		line-height 1.8
+
+// 		&:before
+// 			color darkColorMaster
+// 			content counters(item, ".") ". "
+// 			counter-increment: item
+// 			font 700 20px fontMaster
+
+// 		+ li
+// 			margin-top 20px
+
+
+// 		ol
+// 			margin-top 2px
+// 			margin-bottom 40px
+
+// 			li + li
+// 				margin 21px 0 0
+
+
+
+// .alignLeft
+// 	@media (min-width tablet)
+// 		float left
+// 		margin 0 50px 50px 0
+
+
+// .alignRight
+// 	@media (min-width tablet)
+// 		float right
+// 		margin 0 0 50px 50px
+
+
+
+
+// desabilitado
+// =============
+.disabled
+	cursor default
+	pointer-events none
